@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <windows.h>
 
 static void mostrarTituloCadastro(void) {
     printf(
@@ -60,6 +61,7 @@ Paciente criarPaciente(void) {
 		}
 		
 		printf("Digite uma idade inteira entre 0 e 130.\n");
+		Sleep(2000);
 	}
 	
 	while (true) {
@@ -74,6 +76,7 @@ Paciente criarPaciente(void) {
 		}
 		
 		printf("Digite apenas M ou F.\n");
+		Sleep(2000);
 	}
 	
 	if (paciente.genero == 'M') {
@@ -96,6 +99,7 @@ Paciente criarPaciente(void) {
 			}
 			
 			printf("Digite apenas S ou N.\n");
+			Sleep(2000);
 		}
 	}
 	
@@ -116,6 +120,7 @@ Paciente criarPaciente(void) {
 		}
 		
 		printf("Digite apenas S ou N.\n");
+		Sleep(2000);
 	}
 	
 	paciente.prioridade = definirPrioridade(paciente);

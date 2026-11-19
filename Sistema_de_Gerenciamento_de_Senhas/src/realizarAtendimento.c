@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <windows.h>
 
 static void mostrarTituloAtendimento(void) {
     printf(
@@ -43,6 +44,7 @@ void realizarAtendimento(Senha *senhaNormal, Senha *senhaPreferencial, Senha *se
         if (fim == entrada || *fim != '\n' ||
             opcao < 1 || opcao > 3) {
             printf("Opcao invalida!\n");
+            Sleep(2000);
             continue;
         }
         

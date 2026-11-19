@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <windows.h>
 
 void mostrarMenu(void) {
 	printf(" __       __  ________  __    __  __    __        _______   _______   ______  __    __   ______   ______  _______    ______   __\n");      
@@ -51,6 +52,7 @@ int main(){
 		    opcao = (int) opcaoNaoOfc;
 		} else {
 		    printf("Opcao invalida!\n");
+		    Sleep(2000);
 		    continue;
 		}
 		
@@ -66,11 +68,13 @@ int main(){
 				break;
 			default:
 				printf("Opcao invalida!");
+				Sleep(2000);
 				break;	
 		}
 	}
 	
 	printf("Saindo...");
+	Sleep(2000);
 	
 	free(senhaNormal.pacientes);
 	free(senhaPreferencial.pacientes);

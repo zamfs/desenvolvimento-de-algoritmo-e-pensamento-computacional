@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <windows.h>
 
 static void mostrarTituloEmAtendimento(void) {
     printf(
@@ -58,6 +59,7 @@ void atenderPaciente(Senha *senhaNormal, Senha *senhaPreferencial, Senha *senhaU
 			
 			if (fila == NULL) {
 				printf("\nNenhum paciente aguardando!\n");
+				Sleep(2000);
 				break;
 			}
 			
@@ -71,7 +73,7 @@ void atenderPaciente(Senha *senhaNormal, Senha *senhaPreferencial, Senha *senhaU
 			emAtendimento = true;
 		}
 	
-		printf("\nEm atendimento: %s - Senha: %c%d\n",
+		printf("\nEm atendimento: %s - Senha: %c%03d\n",
 	               pacienteAtual.nome,
 	               pacienteAtual.prioridade,
 	               pacienteAtual.senha);
@@ -91,12 +93,14 @@ void atenderPaciente(Senha *senhaNormal, Senha *senhaPreferencial, Senha *senhaU
 	    if (fim == entrada || *fim != '\n' ||
 	        opcao < 1 || opcao > 2) {
 	        printf("Opcao invalida!\n");
+	        Sleep(2000);
 	        continue;
 	    }
 	    
 	    switch (opcao) {
 	    	case 1:
 	    		printf("\nAtendimento de %s finalizado.\n", pacienteAtual.nome);
+	    		Sleep(2000);
 	    		
 	    		pacienteAtual = (Paciente){0};
 	    		emAtendimento = false;
