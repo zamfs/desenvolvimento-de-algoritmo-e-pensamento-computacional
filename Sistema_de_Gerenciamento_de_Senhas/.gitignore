@@ -1,0 +1,9 @@
+# Arquivos gerados na compilacao
+bin/
+build/
+*.o
+*.exe
+
+# Arquivos locais do Dev-C++
+Makefile.win
+*.layout
